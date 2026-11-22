@@ -1,5 +1,3 @@
-Original font: Courier New
-Font used: Arial
 # My answers: Movie Watchlist workshop
 
 Name: Zara Zuhair
@@ -11,19 +9,20 @@ Answer each question in your own words, two or three sentences. Do not paste an 
 **1.1 (Explain)** In your own words, why did the Favourite button do nothing while favourite was an ordinary variable?
 
 My answer:
- 
-There was no command/direction as to what the button must do when its clicked, for the button to be of use to the web page adding an on-click function along with a compulsory if-condition is necessary
+When favourite was an ordinary variable, it did not trigger a re-render, so React didn't update the screen (and favourite would reset back to false), but by using `useState` it acted like a sticky note for the new value and updated favourite status.
+Additionally, there was no command/direction as to what the button must do when its clicked, for the button to be of use to the web page adding an on-click function along with a compulsory if-condition is necessary.
 
 
 **1.2 (Predict)** There are three cards and you click Add favourite on the second one. Which cards change, and why?
 
-My answer: Only the second one, because these buttons aren’t linked to each other, they act independently of each other
+My answer: Only the second one, because these buttons aren't linked to each other, they act independently of each other
 
 
 **1.3 (Fix)** A friend wrote onClick={setFavourite(true)} and gets "Too many re-renders". What is wrong and how do you fix it?
 
 My answer: 
-The correct code is: onClick={() => setFavourite(!favourite)}, firstly, by stating ‘true’, we are just calling a specific function instead of passing a function into the brackets “ () ”. For this button to work when the page initially displays “Not a favourite” the button must display “Add favourite”, hence the importance of passing the if-condition into the brackets “ () ”
+What's wrong: This onClick runs the setFavourite function without waiting to be clicked on and because the state is being set it triggers a re-render, and since the state is being set every time it re-renders, it creates an infinite loop.
+The correct code is: onClick={() => setFavourite(!favourite)}, firstly, we wrap the onClick function with an arrow so it runs only when clicked. For this button to work when the page initially displays "Not a favourite" the button must display "Add favourite", hence the importance of toggling favourite using (!favourite).
 
 
 ## Task 2
@@ -199,7 +198,3 @@ My answer:
 **8.3 (Predict)** Where would you keep each: (a) dark mode that survives a refresh, (b) which tab is open inside one component, (c) the logged-in user needed by every page?
 
 My answer:
-
-
-
-
