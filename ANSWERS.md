@@ -1,6 +1,8 @@
+Original font: Courier New
+Font used: Arial
 # My answers: Movie Watchlist workshop
 
-Name: 
+Name: Zara Zuhair
 
 Answer each question in your own words, two or three sentences. Do not paste an AI answer. You may be asked to explain these in a viva.
 
@@ -9,19 +11,19 @@ Answer each question in your own words, two or three sentences. Do not paste an 
 **1.1 (Explain)** In your own words, why did the Favourite button do nothing while favourite was an ordinary variable?
 
 My answer:
-
+ 
+There was no command/direction as to what the button must do when its clicked, for the button to be of use to the web page adding an on-click function along with a compulsory if-condition is necessary
 
 
 **1.2 (Predict)** There are three cards and you click Add favourite on the second one. Which cards change, and why?
 
-My answer:
-
+My answer: Only the second one, because these buttons aren’t linked to each other, they act independently of each other
 
 
 **1.3 (Fix)** A friend wrote onClick={setFavourite(true)} and gets "Too many re-renders". What is wrong and how do you fix it?
 
-My answer:
-
+My answer: 
+The correct code is: onClick={() => setFavourite(!favourite)}, firstly, by stating ‘true’, we are just calling a specific function instead of passing a function into the brackets “ () ”. For this button to work when the page initially displays “Not a favourite” the button must display “Add favourite”, hence the importance of passing the if-condition into the brackets “ () ”
 
 
 ## Task 2
@@ -197,6 +199,7 @@ My answer:
 **8.3 (Predict)** Where would you keep each: (a) dark mode that survives a refresh, (b) which tab is open inside one component, (c) the logged-in user needed by every page?
 
 My answer:
+
 
 
 
