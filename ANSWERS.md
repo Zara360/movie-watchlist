@@ -29,13 +29,13 @@ The correct code is: onClick={() => setFavourite(!favourite)}, firstly, we wrap 
 
 **2.1 (Explain)** What does it mean for an input to be controlled? Describe what happens from one key press to the new text appearing in the box.
 
-My answer:
+My answer: By typing value={text}, React can only save whatever is saved as the input text. One key press, triggers and onChange which updates the text when re-rendering
 
 
 
 **2.2 (Explain)** Why is watchlist.push(item) followed by setWatchlist(watchlist) a bug?
 
-My answer:
+My answer: 
 
 
 
